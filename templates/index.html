@@ -1,70 +1,349 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
-
-<!-- HERO -->
-<section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-black via-gray-900 to-black">
-
-    <h1 class="text-5xl font-bold mb-4">
-        Custom Apparel & Merchandise 🔥
-    </h1>
-
-    <p class="text-gray-400 mb-6">
-        Harga terjangkau • Kualitas premium • Pengerjaan cepat ⚡
-    </p>
-
-    <a href="#" class="bg-purple-600 px-6 py-3 rounded-xl hover:bg-purple-700 transition">
-        Order Sekarang
-    </a>
-</section>
-
-
-<!-- PRODUK -->
-<section class="p-16">
-    <h2 class="text-3xl font-bold mb-10 text-center">Produk Kami</h2>
-
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-        <div class="bg-white/10 p-6 rounded-2xl">Kaos</div>
-        <div class="bg-white/10 p-6 rounded-2xl">Hoodie</div>
-        <div class="bg-white/10 p-6 rounded-2xl">Totebag</div>
-        <div class="bg-white/10 p-6 rounded-2xl">Lanyard & ID Card</div>
-
-    </div>
-</section>
-
-
-<!-- KEUNGGULAN -->
-<section class="p-16 bg-gray-900">
-    <h2 class="text-3xl font-bold mb-10 text-center">Kenapa Pilih Kami?</h2>
-
-    <div class="grid md:grid-cols-3 gap-6">
-
-        <div class="bg-white/10 p-6 rounded-2xl">
-            💰 Harga Terjangkau
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Wujudkan Brand Anda dengan Custom Merchandise Premium</h1>
+                <p class="hero-subtitle">Dari desain hingga produksi, kami hadirkan solusi lengkap custom merchandise berkualitas tinggi dengan harga kompetitif.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Mulai Konsultasi Gratis</a>
+                    <a href="#portfolio" class="btn btn-secondary">Lihat Portfolio Kami</a>
+                </div>
+            </div>
+            <div class="hero-features">
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Desain Profesional</h3>
+                    <p>Tim desainer berpengalaman siap mewujudkan visi Anda</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Kualitas Terjamin</h3>
+                    <p>Bahan premium dengan hasil produksi terbaik</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Pengiriman Cepat</h3>
+                    <p>Pengiriman ke seluruh nusantara dengan jaminan tepat waktu</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="bg-white/10 p-6 rounded-2xl">
-            💎 Kualitas Premium
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Layanan Kami</h2>
+                <p>Solusi lengkap untuk kebutuhan custom merchandise Anda</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Custom Design</h3>
+                    <p>Desain merchandise custom sesuai brand identity dan visi Anda dengan konsultasi gratis dari tim desainer profesional kami.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏭</div>
+                    <h3>Produksi Massal</h3>
+                    <p>Kemampuan produksi dari jumlah kecil hingga ribuan unit dengan standar kualitas terjamin dan efisiensi biaya.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📦</div>
+                    <h3>Packaging Premium</h3>
+                    <p>Opsi packaging eksklusif untuk memberikan kesan mewah dan profesional pada produk merchandise Anda.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚚</div>
+                    <h3>Pengiriman Nasional</h3>
+                    <p>Pengiriman ke seluruh Indonesia dengan berbagai pilihan kurir terpercaya dan tracking real-time untuk kemudahan Anda.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💬</div>
+                    <h3>Customer Support 24/7</h3>
+                    <p>Tim customer service kami siap membantu menjawab pertanyaan dan menyelesaikan masalah kapan saja dibutuhkan.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Konsultasi Gratis</h3>
+                    <p>Konsultasi mendalam tentang material, desain, dan strategi pemasaran produk merchandise untuk hasil maksimal.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="bg-white/10 p-6 rounded-2xl">
-            ⚡ Pengerjaan Cepat
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Portfolio Kami</h2>
+                <p>Proyek-proyek terbaik yang telah kami kerjakan untuk berbagai klien</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <img src="{{ url_for('static', filename='img/tshirt2.jpeg') }}" 
+                        class="portfolio-image" 
+                        alt="Corporate Merchandise">
+                    <div class="portfolio-content">
+                        <h3>Branded T-Shirt Series</h3>
+                        <p>Koleksi T-shirt premium untuk startup tech dengan desain minimalis modern. 100 pcs, hasil sempurna dengan branding yang sharp.</p>
+                        <span class="portfolio-tag">T-Shirt</span>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <img src="{{ url_for('static', filename='img/eo.jpg') }}" 
+                        class="portfolio-image" 
+                        alt="Corporate Merchandise">
+
+                    <div class="portfolio-content">
+                        <h3>Corporate Merchandise Bundle</h3>
+                        <p>Paket lengkap merchandise korporat untuk acara launching produk...</p>
+                        <span class="portfolio-tag">Multi Item</span>
+                    </div>
+
+                </div>
+                <div class="portfolio-card">
+                    <img src="{{ url_for('static', filename='img/idcard.jpeg') }}" 
+                        class="portfolio-image" 
+                        alt="Corporate Merchandise">
+                    <div class="portfolio-content">
+                        <h3>Festival Event Apparel</h3>
+                        <p>Custom id card dan Lanyard dengan print full color yang vibrant. 100 pcs dengan kualitas tahan lama.</p>
+                        <span class="portfolio-tag">Event Merchandise</span>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <img src="{{ url_for('static', filename='img/totebag.jpeg') }}" 
+                        class="portfolio-image" 
+                        alt="Corporate Merchandise">
+                    <div class="portfolio-content">
+                        <h3>Eco-Friendly Tote Bags</h3>
+                        <p>Tas ramah lingkungan dengan sablon plastisol. Proyek sustainable untuk brand fashion conscious.</p>
+                        <span class="portfolio-tag">Eco-Friendly</span>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <img src="{{ url_for('static', filename='img/polo.jpeg') }}" 
+                        class="portfolio-image" 
+                        alt="Corporate Merchandise">
+                    <div class="portfolio-content">
+                        <h3>Custom Apolo Collection</h3>
+                        <p>Kaos Apolo premium dengan embroidery detail. Design custom dengan kenyamanan maksimal.</p>
+                        <span class="portfolio-tag">Apolo</span>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <img src="{{ url_for('static', filename='img/eb.jpg') }}" 
+                        class="portfolio-image" 
+                        alt="Corporate Merchandise">
+                    <div class="portfolio-content">
+                        <h3>Corporate Event Bundle</h3>
+                        <p>Merchandise lengkap untuk workshop korporat dengan harga paket hemat. Professional packaging untuk kesan premium.</p>
+                        <span class="portfolio-tag">Bundle Package</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </div>
-</section>
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mengapa Memilih SDSWEAR.ID?</h2>
+                <p>Komitmen kami untuk memberikan yang terbaik bagi Anda</p>
+            </div>
+            <div class="why-us-content">
+                <div class="why-us-list">
+                    <div class="why-us-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h3>Pengalaman 10+ Tahun</h3>
+                            <p>Track record terpercaya melayani ratusan klien dari berbagai industri dan skala bisnis.</p>
+                        </div>
+                    </div>
+                    <div class="why-us-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h3>Tim Profesional & Kreatif</h3>
+                            <p>Desainer dan produser berpengalaman yang passionate dalam menciptakan produk berkualitas tinggi.</p>
+                        </div>
+                    </div>
+                    <div class="why-us-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h3>Harga Kompetitif</h3>
+                            <p>Penawaran harga terbaik tanpa mengorbankan kualitas produk dengan berbagai pilihan paket.</p>
+                        </div>
+                    </div>
+                    <div class="why-us-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h3>Kualitas Premium</h3>
+                            <p>Menggunakan bahan berkualitas tinggi dengan proses quality control yang ketat di setiap tahap produksi.</p>
+                        </div>
+                    </div>
+                    <div class="why-us-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h3>Pengiriman Tepat Waktu</h3>
+                            <p>Komitmen pengiriman sesuai jadwal yang dijanjikan dengan tracking lengkap untuk transparansi maksimal.</p>
+                        </div>
+                    </div>
+                    <div class="why-us-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h3>Customer Satisfaction</h3>
+                            <p>Tingkat kepuasan pelanggan 98% dengan garansi revisi unlimited hingga desain sesuai ekspektasi Anda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Testimoni Klien Kami</h2>
+                <p>Kepuasan klien adalah bukti kualitas layanan kami</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"SDSWEAR.ID benar-benar profesional! Dari konsultasi, desain, hingga produksi semua berjalan lancar. Hasil merchandise kami sangat memuaskan dan customer kami suka!"</p>
+                    <div class="testimonial-author">
+                        <h4>Budi Santoso</h4>
+                        <p>Founder, TechStartup Indonesia</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Harga yang sangat kompetitif dengan kualitas yang tidak tertandingi. Tim mereka responsif, helpful, dan selalu memberikan solusi terbaik untuk kebutuhan kami."</p>
+                    <div class="testimonial-author">
+                        <h4>Siti Nurhaliza</h4>
+                        <p>Marketing Manager, Fashion Brand XYZ</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Kami sudah order berkali-kali dari SDSWEAR.ID dan selalu puas. Kualitas konsisten, pengiriman cepat, dan customer service mereka luar biasa responsif."</p>
+                    <div class="testimonial-author">
+                        <h4>Ahmad Wijaya</h4>
+                        <p>CEO, Event Management Company</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- CTA -->
-<section class="p-16 text-center">
-    <h2 class="text-3xl font-bold mb-6">
-        Siap bikin merch kamu?
-    </h2>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mari Kolaborasi Bersama</h2>
+                <p>Hubungi kami untuk konsultasi gratis dan penawaran terbaik</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+62 8xx-xxxx-xxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Contoh: Ingin order custom t-shirt">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Jelaskan kebutuhan merchandise Anda..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Kirim Pesan</button>
+                    </form>
+                    <div id="formMessage" class="form-message" style="display: none;"></div>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:info@sdswear.id">info@sdswear.id</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📞 Telepon</h3>
+                        <p><a href="tel:+6281234567890">+62 895-3609-53238</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📍 Lokasi</h3>
+                        <p>Tegal, Indonesia</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>⏰ Jam Operasional</h3>
+                        <p>Senin - Jumat: 09:00 - 18:00<br>Sabtu: 10:00 - 16:00<br>Minggu: Tutup</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
 
-    <a href="#" class="bg-purple-600 px-8 py-4 rounded-xl text-lg">
-        Hubungi Sekarang
-    </a>
-</section>
-
+{% block extra_js %}
+<script>
+    // Handle contact form submission
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
+        
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            const result = await response.json();
+            const messageDiv = document.getElementById('formMessage');
+            
+            if (result.success) {
+                messageDiv.className = 'form-message success';
+                messageDiv.textContent = result.message;
+                document.getElementById('contactForm').reset();
+            } else {
+                messageDiv.className = 'form-message error';
+                messageDiv.textContent = result.message;
+            }
+            
+            messageDiv.style.display = 'block';
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 5000);
+        } catch (error) {
+            console.error('Error:', error);
+            const messageDiv = document.getElementById('formMessage');
+            messageDiv.className = 'form-message error';
+            messageDiv.textContent = 'Terjadi kesalahan. Silakan coba lagi.';
+            messageDiv.style.display = 'block';
+        }
+    });
+</script>
 {% endblock %}
